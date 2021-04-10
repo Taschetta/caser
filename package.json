@@ -1,0 +1,17 @@
+{
+  "name": "@taschetta/caser",
+  "version": "1.0.0",
+  "description": "Basic utility for text casing transformation",
+  "main": "build/caser.js",
+  "types": "build/caser.d.ts",
+  "files": ["build/**/*"],
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "Santiago Taschetta",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "typescript": "^4.2.4"
+  }
+}
