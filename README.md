@@ -1,1 +1,1 @@
-"# Caser: a simple text casing utility" 
+# Caser: a simple text casing utility
