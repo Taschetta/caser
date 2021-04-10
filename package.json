@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Basic utility for text casing transformation",
   "main": "build/caser.js",
+  "type": "module",
   "types": "build/caser.d.ts",
   "files": ["build/**/*"],
   "scripts": {

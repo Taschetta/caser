@@ -1,6 +1,6 @@
-import { InvalidValueError } from './caser-errors'
+import { InvalidValueError } from './caser-errors.js'
 
-import * as regex from './caser-regex'
+import * as regex from './caser-regex.js'
 
 export type Case = 'kebab' | 'camel' | 'pascal' | 'snake'
 
