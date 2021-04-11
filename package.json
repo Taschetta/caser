@@ -1,6 +1,6 @@
 {
   "name": "@taschetta/caser",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Basic utility for text casing transformation",
   "main": "build/caser.js",
   "type": "module",
