@@ -2,9 +2,10 @@ import { InvalidValueError } from './caser-errors.js'
 
 import * as regex from './caser-regex.js'
 
-export type Case = 'kebab' | 'camel' | 'pascal' | 'snake'
+export type Case = 'kebab' | 'camel' | 'pascal' | 'snake' | 'other'
 
 export interface Caser {
+  value: string,
   case: string,
   camel: string,
   kebab: string,
@@ -19,7 +20,7 @@ export default function useCaser(value: string): Caser {
     if (regex.checkKebab.test(value))   return 'kebab'
     if (regex.checkPascal.test(value))  return 'pascal'
     if (regex.checkSnake.test(value))   return 'snake'
-    throw new InvalidValueError(value)
+    else return 'other'
   }
   
   const getCamel = () => {
@@ -50,6 +51,7 @@ export default function useCaser(value: string): Caser {
   }
 
   return {
+    value,
     get case()    { return getCase() },
     get camel()   { return getCamel() },
     get kebab()   { return getKebab() },
