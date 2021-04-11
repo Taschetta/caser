@@ -4,7 +4,15 @@ import * as regex from './caser-regex.js'
 
 export type Case = 'kebab' | 'camel' | 'pascal' | 'snake'
 
-export default function useCaser(value: string) {  
+export interface Caser {
+  case: string,
+  camel: string,
+  kebab: string,
+  pascal: string,
+  snake: string,
+}
+
+export default function useCaser(value: string): Caser {  
   
   const getCase = (): Case => {
     if (regex.checkCamel.test(value))   return 'camel'
