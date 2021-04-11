@@ -7,7 +7,8 @@
   "types": "build/caser.d.ts",
   "files": ["build/**/*"],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "example": "node example/index.js"
   },
   "repository": {
     "type": "git",
