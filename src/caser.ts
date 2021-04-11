@@ -40,13 +40,13 @@ export default function useCaser(value: string): Caser {
   const getPascal = () => {
     const match = value.match(regex.matchWord)
     if(!match) throw new InvalidValueError(value)
-    return match.map(x => x.toLocaleLowerCase()).join('_')
+    return match.map(x => x.charAt(0).toUpperCase() + x.slice(1)).join('')
   }
 
   const getSnake = () => {
     const match = value.match(regex.matchWord)
     if(!match) throw new InvalidValueError(value)
-    return match.map(x => x.charAt(0).toUpperCase() + x.slice(1)).join('')
+    return match.map(x => x.toLocaleLowerCase()).join('_')
   }
 
   return {
